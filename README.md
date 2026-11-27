@@ -20,6 +20,7 @@ A curated list of top health, fitness, exercise, biomechanics, and wearable biom
 
 
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saashosted-platforms)
 
 - [Open-Source Equivalents & Datasets](#open-source-equivalents--datasets)
@@ -42,33 +43,24 @@ A curated list of top health, fitness, exercise, biomechanics, and wearable biom
 
 
 
+## Sector Overview & Market Dynamics
+
+The global wearable technology and digital health market is valued at approximately **$90B–$100B+** (projected to surpass $250B+ by 2030), with the underlying health data integration and healthcare API infrastructure market representing roughly **$1.3B–$2.0B**. The sector is **moderately fragmented**: while foundational wearable consumer hardware has major players (Apple, Google/Fitbit, Garmin, Samsung), the software ecosystem of biometrics, research platforms, remote patient monitoring (RPM), and data normalization APIs remains fragmented across specialized niche aggregators and multi-device middleware providers competing against custom proprietary vendor APIs.
+
+---
+
 ## SaaS/Hosted Platforms
-
-
 
 Commercial, cloud-hosted platforms, proprietary data marketplaces, and managed wearable APIs for health, fitness, and athletic telemetry.
 
-
-
-* **[Kaggle](https://kaggle.com)** - Cloud data science platform hosting thousands of user-uploaded fitness, Fitbit, workout, and nutrition datasets.
-
-* **[PhysioNet](https://physionet.org)** - Managed repository of freely-available medical research data and physiological signals (ECG, PPG, accelerometry) maintained by MIT.
-
-* **[Fitabase](https://fitabase.com)** - Cloud research platform for aggregating, managing, and exporting high-resolution wearable data from Fitbit and Garmin devices.
-
-* **[Strava Metro](https://strava.com)** - Aggregated, de-identified human-powered transportation and athletic activity dataset provided to urban planners and researchers.
-
-* **[Human Kinetics Cloud](https://humankinetics.com)** - Digital publishing and educational platform offering proprietary kinesiology, exercise science, and sports performance resources.
-
-* **[HealthData.gov](https://healthdata.gov)** - US government portal providing centralized access to public health, physical activity, and population wellness datasets.
-
-* **[Terra API](https://tryterra.co)** - Unified commercial API providing developers normalized access to health and fitness data from wearables (Garmin, Apple Health, Oura, Whoop).
-
-* **[Validic](https://validic.com)** - Enterprise cloud platform connecting clinical systems with patient-generated biometric and fitness wearable data.
-
-* **[Human API](https://humanapi.co)** - Commercial health data network enabling apps to retrieve normalized wellness, activity, and clinical records.
-
-* **[Fitrockr](https://fitrockr.com)** - Cloud analytics and research platform specialized in raw sensor data extraction and fleet management for Garmin smartwatches.
+| Platform | Description | Size (Revenue / Valuation) | Starting Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Strava Metro](https://strava.com)** | Aggregated, de-identified human-powered mobility, running, and cycling geospatial data for urban planning and public transit research. | **$2.2B Valuation** (~$415M–$490M ARR) | **Free** for qualified public sector / academic partners; commercial enterprise data licensing starts at custom quotes ($10,000+/yr) | **Free indefinitely** for qualifying municipal agencies, transportation departments, active transit advocacy groups, and approved university researchers via Metroview application. |
+| **[Validic](https://validic.com)** | Enterprise digital health IoT and remote care platform aggregating biometrics and connecting wearables/RPM devices into EHR systems. | **$31.6M Total Funding** (Acquired by ChartSpan, 2026; est. $10M–$25M ARR) | Developer tier is free; production/commercial deployment tiers start at **$500/month** (scaling with connected active patient volume and EHR integration depth) | **Free Developer Tier** available for testing, prototyping, and sandbox integration with synthetic and developer test devices. |
+| **[Human API](https://humanapi.co)** | Health data aggregation network connecting consumer wearables, wellness apps, and EHR/clinical records. | **$36M–$44M Total Funding** (Acquired by LexisNexis Risk Solutions / RELX; est. $5M–$10M ARR) | Enterprise production data access starts at **$500/month** (scaling with volume of retrieved health and wellness records) | **30-day free developer sandbox** with access to sample and test patient health/wellness data connections. |
+| **[Terra API](https://tryterra.co)** | Unified developer API providing normalized access to health, sleep, and fitness data across 500+ wearables and fitness apps. | **$2.8M Seed Funding** (est. $1M–$3M ARR) | **$399/month** (annual billing) or **$499/month** (monthly billing) including core integrations and active user credit pool; streaming API available at +$99/month | **No permanent free tier**; offers a **30-day money-back evaluation guarantee** on standard plans, and up to $100,000 in credits over 6 months via competitive application to the Terra Startup Accelerator. |
+| **[Fitrockr](https://fitrockr.com)** | Research and fleet management SaaS specialized in raw high-resolution sensor extraction and analytics from Garmin smartwatches. | **Profitable / Bootstrapped** (est. $500K–$1.5M ARR; 40%–87% annual revenue growth) | **$27.50 per connected device** (minimum 3-month commitment, including hosting and unlimited admin/user accounts) | **14-day free trial** with full access to test Garmin device fleet management and data export tools. |
+| **[Fitabase](https://fitabase.com)** | Cloud data aggregation and device management platform for clinical research studies using Fitbit and Garmin devices. | **Bootstrapped** (~$200K–$300K ARR; Small Steps Labs LLC) | **$10 per participant per month** (billed as participant-month credits for the study duration) | **14-day free trial** for research teams to test device pairing, data syncing, and study management workflows. |
 
 
 
