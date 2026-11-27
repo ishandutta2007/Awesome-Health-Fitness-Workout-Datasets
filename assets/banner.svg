@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0e172a"/>
+      <stop offset="100%" stop-color="#070a13"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <linearGradient id="accentPulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes pulseOrb {
+        0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.25; }
+        50% { transform: scale(1.15) translate(20px, -10px); opacity: 0.45; }
+      }
+      @keyframes floatGrid {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(40px); }
+      }
+      @keyframes ecgMove {
+        0% { stroke-dashoffset: 1400; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes waveFlow {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-640px); }
+      }
+      .orb-1 { animation: pulseOrb 8s ease-in-out infinite alternate; }
+      .orb-2 { animation: pulseOrb 10s ease-in-out infinite alternate-reverse; }
+      .ecg-line {
+        stroke-dasharray: 1400;
+        animation: ecgMove 6s linear infinite;
+      }
+      .wave-track {
+        animation: waveFlow 12s linear infinite;
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .sub-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1280" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Subtle High-tech Grid Pattern -->
+  <g opacity="0.08" stroke="#38bdf8" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40"/>
+    </pattern>
+    <rect width="1280" height="400" fill="url(#grid)"/>
+  </g>
+
+  <!-- Glowing Orbs (Deep Background) -->
+  <circle cx="200" cy="100" r="140" fill="#06b6d4" filter="url(#softGlow)" class="orb-1"/>
+  <circle cx="1080" cy="300" r="160" fill="#8b5cf6" filter="url(#softGlow)" class="orb-2"/>
+  <circle cx="700" cy="350" r="120" fill="#10b981" filter="url(#softGlow)" opacity="0.15"/>
+
+  <!-- Dynamic ECG / Biometric Pulse Line (Lower Ambient Canvas) -->
+  <g opacity="0.4" transform="translate(0, 180)">
+    <path class="ecg-line" d="M 0,100 L 250,100 L 270,70 L 290,130 L 310,100 L 450,100 L 470,20 L 490,170 L 510,70 L 530,120 L 550,100 L 800,100 L 820,50 L 840,150 L 860,100 L 1050,100 L 1070,30 L 1090,160 L 1110,100 L 1280,100" fill="none" stroke="url(#accentPulse)" stroke-width="3" filter="url(#glow)"/>
+  </g>
+
+  <!-- Subtle Kinetic Wave in Background -->
+  <g opacity="0.12" fill="none" stroke="#38bdf8" stroke-width="1.5">
+    <path d="M 0,320 Q 320,270 640,320 T 1280,320" />
+    <path d="M 0,340 Q 320,290 640,340 T 1280,340" />
+  </g>
+
+  <!-- Foreground Content Container (Guaranteed never covered by dynamic elements) -->
+  <g id="foreground-content">
+    <!-- Top Category Tag -->
+    <g transform="translate(640, 75)">
+      <rect x="-140" y="-18" width="280" height="36" rx="18" fill="rgba(6, 182, 212, 0.12)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1"/>
+      <circle cx="-110" cy="0" r="4" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="-95" y="5" fill="#38bdf8" class="pill-text" letter-spacing="1.2">CURATED DATA REPOSITORY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="640" y="160" text-anchor="middle" class="title-text" font-size="44" fill="#ffffff">
+      Awesome Health Fitness Workout Datasets
+    </text>
+
+    <!-- Title Underline Accent Gradient -->
+    <rect x="440" y="180" width="400" height="3" rx="1.5" fill="url(#primaryGrad)"/>
+
+    <!-- Subtitle / Mission Statement -->
+    <text x="640" y="222" text-anchor="middle" class="sub-text" font-size="19" fill="#94a3b8">
+      Open-Source Biometrics, Wearable Telemetry, Motion Capture, Exercise Catalogs &amp; Health APIs
+    </text>
+
+    <!-- Feature Pills / Domain Badges -->
+    <g transform="translate(640, 290)">
+      <!-- Pill 1: Wearables & Biometrics -->
+      <g transform="translate(-400, 0)">
+        <rect x="0" y="0" width="185" height="42" rx="21" fill="url(#pillGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <text x="92" y="26" text-anchor="middle" fill="#e2e8f0" class="pill-text">⌚ Wearables &amp; ECG</text>
+      </g>
+
+      <!-- Pill 2: Pose & Biomechanics -->
+      <g transform="translate(-195, 0)">
+        <rect x="0" y="0" width="185" height="42" rx="21" fill="url(#pillGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <text x="92" y="26" text-anchor="middle" fill="#e2e8f0" class="pill-text">🏃 Biomechanics &amp; Pose</text>
+      </g>
+
+      <!-- Pill 3: Exercise DBs -->
+      <g transform="translate(10, 0)">
+        <rect x="0" y="0" width="185" height="42" rx="21" fill="url(#pillGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <text x="92" y="26" text-anchor="middle" fill="#e2e8f0" class="pill-text">🏋️ Exercise &amp; Workouts</text>
+      </g>
+
+      <!-- Pill 4: Open Nutrition -->
+      <g transform="translate(215, 0)">
+        <rect x="0" y="0" width="185" height="42" rx="21" fill="url(#pillGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <text x="92" y="26" text-anchor="middle" fill="#e2e8f0" class="pill-text">🥗 Nutrition &amp; Macros</text>
+      </g>
+    </g>
+
+    <!-- Bottom Border Line -->
+    <rect x="0" y="396" width="1280" height="4" fill="url(#primaryGrad)"/>
+  </g>
+</svg>
